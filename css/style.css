@@ -1,0 +1,392 @@
+@font-face{
+    font-family: 'Saros';
+    src: url(../fonts/Saros-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'NimbusSansRegular';
+        src: url(../fonts/NimbusSanL-Reg.otf);
+}
+
+@font-face{
+    font-family: 'NimbusSansRegularItalic';
+        src: url(../fonts/NimbusSanL-Reltag.otf);
+}
+
+@font-face{
+    font-family: 'NimbusSansBold';
+        src: url(../fonts/NimbusSanL-Bol.otf);
+}
+
+@font-face{
+    font-family: 'NimbusSansBoldItalic';
+        src: url(../fonts/NimbusSanL-BolIta.otf);
+}
+
+
+html{
+    overflow-y: scroll;
+}
+
+/* Navigation Bar styling*/
+
+.navbar-brand{
+    padding: 0px;
+}
+
+.navbar-nav{
+    float: right;
+    color: white;
+}
+.navbar-brand img {
+  height: 100%;
+  padding: 10px 5px;
+  width: auto;
+}
+
+@media only screen and (max-width : 768px){
+    .navbar-brand {
+        height: 50px;
+        width: 80%;
+        padding: 0px;
+    }
+  .navbar-brand img {
+  max-height: 100%;
+  max-width: 80vw;
+    }
+}
+
+.navbar-right {
+    float: right;
+}
+
+.navbar-nav li{
+   padding-bottom: 6px;
+   align-content: right;
+}
+
+.navbar-nav li a:hover {
+   
+}
+
+.navbar-nav li a{
+    font-family: "NimbusSansBold";
+    font-size: 24px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.navbar{
+    margin: 0;
+    padding-top: 0;
+    background: none;
+    opacity: .95;
+}
+
+#navbarCollapse{
+    border: none;
+}
+
+/* navbar */
+.navbar-default {
+    border: none;    
+}
+/* Title */
+.navbar-default .navbar-brand {
+    color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: white;
+}
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: white;
+        text-align: right;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: white;
+    background-color: #57595b;
+    border-bottom: 4px solid white;
+    padding-bottom: 6px;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #777;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #D5D5D5;
+}
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* Mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+
+.dropdown-menu{
+    background: gray;
+    width: inherit;
+    position: absolute;
+    text-align: left;
+}
+
+@media screen and (max-width: 991px) {    
+    .dropdown-menu{
+       position: relative;
+        text-align: right;
+    }
+}
+
+.dropdown-menu li a{
+    font-size: 16px;
+}
+
+
+/*Body styling*/
+
+body{
+    background-image: url(../images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    align-content: center;
+}
+
+#name{
+    color: white;
+    font-size: 32px;
+}
+
+h1 {
+  color: white;
+  font-weight: 600;
+  font-size: 26px;
+  margin-left: 0px;
+}
+
+h2 {
+    color: white;
+}
+
+.videoWrapper{
+    overflow: hidden;
+    position:relative;    
+    padding-bottom: 56.25%; /* 16:9*/
+    padding-top: 25px; 
+    height: 0;
+}
+
+@media screen and (max-width: 991px) {    
+    .videoWrapper{
+        overflow: hidden;
+        position:relative;    
+        height: 0;
+    }
+}
+
+.videoContent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+}
+
+@media screen and (max-width: 991px) {    
+    .videoContent{
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+}
+
+.headerContainer{
+    margin: 20px;
+}
+
+h3 {
+    font-family: "Saros";
+    color: white;
+    font-weight: 700;
+    margin-top: 0;
+    text-align: center;
+}
+
+#aboutMe {
+    border-bottom: 3px solid white;
+}
+
+.category {
+    color: white;
+    font-family: "Saros";
+    font-size: 22px;
+    text-align: left;
+}
+
+.category-name{
+    font-family: "Saros";
+    font-size: 16px;
+    color: white;
+    padding-bottom: 0;
+}
+
+.category-role{
+    color: lightgrey;
+    font-family: "Saros";
+    font-size: 16px;
+    font-style: italic;
+}
+.panel-body{
+    background-color: #4b5059;
+    border-color: none;
+}
+
+.textFont{
+    color: white;
+    font-family: "Saros";
+    font-size: 16px;
+    padding-top: 0px;
+    display: block;
+    align-content: center;
+}
+
+.text-measurements{
+    color: white;
+    font-family: "Saros";
+    font-size: 16px;
+    padding-top: 30px;
+    display: block;
+    align-content: center;
+    text-align: center;
+}
+
+.content{
+    margin: 5% 20%;
+}
+@media only screen and (max-width : 768px){
+  .content{
+        margin: 5% 10%;
+}
+    }
+
+#landingPage{
+    margin: 0;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#landingPageText{
+    font-family: "Saros";
+    font-size: 28px;
+    letter-spacing: 1px;
+    
+}
+
+.container{
+    width: 100%;
+    text-align: left;
+    margin: 5px;
+    margin-left: 1s00px;
+    margin-right: 200px;
+}
+
+
+
+.container-fluid{
+    padding-bottom: 50px;
+}
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 5px;
+    align-content: center;
+}
+
+.col-lg-3{
+    padding: 5px 5px;
+    flex: 25%;
+    max-width: 25%;
+}
+
+.theatreHeader{
+    font-family: "Saros";
+    text-align: center;
+    font-size: 48px;
+    color: azure
+}
+
+.col-lg-3{
+    align-content: center;
+}
+
+.vertical-line{
+    border-left: 2px solid white;
+    height: 100px;
+}
+@media only screen and (max-width : 768px){
+  .vertical-line{
+      border-left: none;
+      border-top: 2px solid white;
+      height: 100px;
+}
+    }
+
+
+.img-tall{
+    height: 100%x;
+    width: 90%
+}
+
+.img-wide{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-contact {
+    height: 70%;
+    width: 100%;
+}
+
+.form-group label{
+    color: white;
+}
