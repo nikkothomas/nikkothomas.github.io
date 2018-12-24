@@ -8,13 +8,23 @@ $('li.dropdown ul').find('a').on('click', function() {
     window.location = $(this).attr('href');
 });
 
-$(".carousel").swipeRight(function() {  
-      $(".carousel").carousel('prev');  
-    });  
-   $(".carousel").swipeLeft(function() {  
-      $("#.carousel").carousel('next');  
-   }); 
-
 $(document).ready(function() {
   $('.dropdown-toggle').dropdown();
 });
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      $(".backToTop").show()
+  } else {
+       $(".backToTop").hide();
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
