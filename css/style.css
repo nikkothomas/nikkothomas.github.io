@@ -200,6 +200,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     align-content: center;
+    height: 100%;
 }
 
 #name{
