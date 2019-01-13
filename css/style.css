@@ -349,13 +349,14 @@ h3 {
     font-size: 28px;
     letter-spacing: 1px;
 }
-@media only screen and (max-width : 768px){
-  #landingPageText{
-    font-family: "Saros";
-    font-size: 42px;
-    letter-spacing: 1px;
+.quote {
+    display: inline;
 }
+@media only screen and (max-width : 600px){
+    .quote {
+        display: block;
     }
+}
 
 
 .container{
