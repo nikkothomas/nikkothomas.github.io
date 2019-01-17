@@ -348,8 +348,16 @@ h3 {
     font-family: "Saros";
     font-size: 28px;
     letter-spacing: 1px;
-    
 }
+.quote {
+    display: inline;
+}
+@media only screen and (max-width : 600px){
+    .quote {
+        display: block;
+    }
+}
+
 
 .container{
     width: 100%;
@@ -371,6 +379,10 @@ img {
     max-height: 100%;
     margin-bottom: 5px;
     align-content: center;
+}
+
+.maxHeightDiv {
+    height: 300px;
 }
 
 .col-lg-3{
