@@ -382,7 +382,12 @@ img {
 }
 
 .maxHeightDiv {
-    height: 300px;
+    height: 43rem;
+}
+@media only screen and (max-width : 768px){
+    .maxHeightDiv {
+        height: 30rem;
+    }
 }
 
 .col-lg-3{
@@ -421,8 +426,9 @@ img {
 }
 
 .img-wide{
-    max-height: 100%;
+    max-height: 35rem;
     max-width: 100%;
+    align-content: center;
 }
 
 .img-center {
