@@ -9,7 +9,8 @@ $('li.dropdown ul').find('a').on('click', function() {
 });
 
 $(document).ready(function() {
-  $('.dropdown-toggle').dropdown();
+    $('.dropdown-toggle').dropdown();
+    $('#navbar').load("../navbar.html");
 });
 
 window.onscroll = function() {scrollFunction()};
