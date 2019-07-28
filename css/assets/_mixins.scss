@@ -3,11 +3,14 @@
 //Background 
 
 @mixin background(
-    $imgpath,
+    $img,
     $position:0 0,
     $repeat: no-repeat
     ) {
-    background: transparent url(#{$imgpath}) $repeat $position;
+    background:
+		url('#{$path--img}/#{$img}') $repeat $position;
+	background-size: 100% 100%;	
+	
 }
 
 //Parallax

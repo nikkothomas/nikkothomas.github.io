@@ -13,11 +13,6 @@ $(document).ready(function() {
     $('#navbar').load("../navbar.html");
 });
 
-$('.parallax-window').parallax({
-    naturalWidth: 600,
-    naturalHeight: 400
-  });
-
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
