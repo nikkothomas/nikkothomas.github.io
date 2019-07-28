@@ -23,12 +23,16 @@
 	src: url(../fonts/NimbusSanL-BolIta.otf);
 }
 
+$whiteColor: #ffffff;
+
 
 html {
 	overflow-y: scroll;
 }
 
 /* Back to Top styling*/
+
+
 
 @media screen and (max-width: 991px) {
 	.backToTop {
@@ -209,9 +213,12 @@ h3 {
 }
 
 #coverImage {
-	width: 100%;
+	width: 50%;
 	height: 130%;
 	position: absolute;
+	text-align: center;
+	background-size: cover;
+	z-index: -10;
 }
 
 #landingPage {
