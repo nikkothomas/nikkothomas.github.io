@@ -1,10 +1,9 @@
 @include parallax-init;
 
 .parallax {
-    @include background("Background.jpeg");
-    @include parallax(-.4);
-	width: 100%;
-	height: 100%;
-    }
+    @include background("Background.jpeg", $position: center top, $attachment: fixed);
+    @include parallax(-.5);    
     
-
+	height: 100vh;
+    width: 100vw;
+}

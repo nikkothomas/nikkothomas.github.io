@@ -16,15 +16,34 @@ body, body * {
 }
 
 .parallax {
-  background: url("../images/Background.jpeg") no-repeat 0 0;
-  background-size: 100% 100%;
-  transform: translateZ(-0.4px) scale(1.4);
-  z-index: -400;
-  width: 100%;
-  height: 100%;
+  background: url("../images/Background.jpeg") no-repeat center top fixed;
+  background-size: cover;
+  transform: translateZ(-0.5px) scale(1.5);
+  z-index: -500;
+  height: 100vh;
+  width: 100vw;
 }
 
-.container-fluid input + label {
+#navbar {
+  background: url("../images/Background.jpeg") no-repeat top fixed;
+  background-size: cover;
+  height: 150px;
+  width: 100%;
+  top: 0;
+}
+#navbar li {
+  list-style-type: none;
+}
+#navbar .navbar-brand > img {
+  width: 21em;
+  height: 3em;
+  margin-top: 0.9em;
+  z-index: -2;
+}
+#navbar #burger {
+  display: none;
+}
+#navbar #burger + label {
   position: fixed;
   top: 40px;
   right: 40px;
@@ -32,7 +51,7 @@ body, body * {
   width: 25px;
   z-index: 5;
 }
-.container-fluid input + label span {
+#navbar #burger + label span {
   position: absolute;
   width: 100%;
   height: 2px;
@@ -40,34 +59,31 @@ body, body * {
   margin-top: -1px;
   left: 0;
   display: block;
-  background: #020304;
+  background: #FFF;
   transition: 0.5s;
 }
-.container-fluid input + label span:first-child {
+#navbar #burger + label span:first-child {
   top: 3px;
 }
-.container-fluid input + label span:last-child {
+#navbar #burger + label span:last-child {
   top: 23px;
 }
-.container-fluid label:hover {
+#navbar label:hover {
   cursor: pointer;
 }
-.container-fluid #menuBurger {
-  display: none;
-}
-.container-fluid input:checked + label span {
+#navbar #burger:checked + label span {
   opacity: 0;
   top: 50%;
 }
-.container-fluid input:checked + label span:first-child {
+#navbar #burger:checked + label span:first-child {
   opacity: 1;
   transform: rotate(-45deg);
 }
-.container-fluid input:checked + label span:last-child {
+#navbar #burger:checked + label span:last-child {
   opacity: 1;
   transform: rotate(45deg);
 }
-.container-fluid input ~ nav {
+#navbar #burger ~ #menu-fullscreen nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -78,43 +94,34 @@ body, body * {
   transition-delay: 0.5s;
   overflow: hidden;
 }
-.container-fluid input ~ nav > ul {
+#navbar #burger ~ #menu-fullscreen nav > ul {
   text-align: center;
   position: absolute;
   top: 35%;
   left: 20%;
   right: 20%;
 }
-.container-fluid input ~ nav > ul > li {
+#navbar #burger ~ #menu-fullscreen nav > ul > li {
   opacity: 0;
   transition: 0.5s;
   transition-delay: 0s;
 }
-.container-fluid input ~ nav > ul > li > a {
+#navbar #burger ~ #menu-fullscreen nav > ul > li > a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #020304;
+  color: #FFF;
   font-weight: 700;
   font-family: sans-serif;
   display: block;
   padding: 30px;
 }
-.container-fluid input:checked ~ nav {
-  height: 100%;
+#navbar #burger:checked ~ #menu-fullscreen nav {
+  height: 100vh;
   transition-delay: 0s;
 }
-.container-fluid input:checked ~ nav > ul > li {
+#navbar #burger:checked ~ #menu-fullscreen nav > ul > li {
   opacity: 1;
   transition-delay: 0.5s;
-}
-.container-fluid li {
-  list-style-type: none;
-}
-.container-fluid .navbar-brand > img {
-  width: 21em;
-  height: 3em;
-  margin-top: 0.9em;
-  z-index: -2;
 }
 
 /*# sourceMappingURL=main.css.map */

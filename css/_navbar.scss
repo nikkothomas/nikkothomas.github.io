@@ -1,5 +1,27 @@
-.container-fluid {
-	input + label {
+
+#navbar {
+    @include background("Background.jpeg", $position: center top, $attachment: fixed);
+    height: 150px;
+    width: 100vw;
+    top: 0;
+    
+	li {
+		list-style-type: none;
+	}	
+
+	.navbar-brand>img {
+		width: 21em;
+		height: 3em;
+		margin-top: .9em;
+		z-index: -2;
+	}
+    
+    //Creates and positions hamburger menu
+    #burger{
+		display: none;
+	}
+    
+	#burger + label {
 		position: fixed;
 		top: 40px;
 		right: 40px;
@@ -31,12 +53,9 @@
 	label:hover {
 		cursor: pointer;
 	}
-	
-	#menuBurger{
-		display: none;
-	}
-
-	input:checked + label {
+    
+    //Burger to X animation
+	#burger:checked + label {
 		span {
 			opacity: 0;
 			top: 50%;
@@ -53,7 +72,7 @@
 		}
 	}
 
-	input ~ nav {
+	#burger ~ #menu-fullscreen nav {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -88,9 +107,9 @@
 			}
 		}
 	}
-
-	input:checked ~ nav {
-		height: 100%;
+    //Show fullscreen menu when clicked
+	#burger:checked ~ #menu-fullscreen nav {
+		height: 100vh;
 		transition-delay: 0s;
 
 		> ul {
@@ -99,18 +118,5 @@
 				transition-delay: .5s;
 			}
 		}
-	}
-
-	li {
-		list-style-type: none;
-	}
-	
-	
-
-	.navbar-brand>img {
-		width: 21em;
-		height: 3em;
-		margin-top: .9em;
-		z-index: -2;
 	}
 }

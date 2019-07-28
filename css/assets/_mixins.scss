@@ -4,12 +4,13 @@
 
 @mixin background(
     $img,
-    $position:0 0,
-    $repeat: no-repeat
+    $position: 0 0,
+    $repeat: no-repeat,
+    $attachment: scroll
     ) {
     background:
-		url('#{$path--img}/#{$img}') $repeat $position;
-	background-size: 100% 100%;	
+		url('#{$path--img}/#{$img}') $repeat $position $attachment;
+        background-size: cover;
 	
 }
 
