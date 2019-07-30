@@ -10,8 +10,8 @@ $('li.dropdown ul').find('a').on('click', function() {
 
 $(document).ready(function() {
     $('.dropdown-toggle').dropdown();
-    $('#navbar').load("../navbar.html");
-    $("#sticker").sticky({topSpacing:0});
+    $(header).load("../navbar.html");
+    //$("#sticker").sticky({topSpacing:0});
 });
 
 window.onscroll = function() {scrollFunction()};

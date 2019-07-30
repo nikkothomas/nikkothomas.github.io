@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-  overflow: auto;
+  overflow: scroll;
   perspective: 1px;
   transform-style: preserve-3d;
 }
@@ -18,18 +18,17 @@ body, body * {
 .parallax {
   background: url("../images/Background.jpeg") no-repeat center top fixed;
   background-size: cover;
-  transform: translateZ(-0.5px) scale(1.5);
-  z-index: -500;
-  height: 100vh;
+  transform: translateZ(-0.05px) scale(1.05);
+  z-index: -50;
+  height: 120vh;
   width: 100vw;
 }
 
 #navbar {
-  background: url("../images/Background.jpeg") no-repeat top fixed;
-  background-size: cover;
-  height: 150px;
-  width: 100%;
-  top: 0;
+  background: transparent;
+  position: sticky;
+  height: 100px;
+  width: 100vw;
 }
 #navbar li {
   list-style-type: none;
@@ -93,11 +92,12 @@ body, body * {
   transition: 0.5s;
   transition-delay: 0.5s;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
 }
 #navbar #burger ~ #menu-fullscreen nav > ul {
   text-align: center;
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: 20%;
   right: 20%;
 }
@@ -111,17 +111,30 @@ body, body * {
   text-transform: uppercase;
   color: #FFF;
   font-weight: 700;
+  font-size: 32px;
   font-family: sans-serif;
   display: block;
   padding: 30px;
 }
 #navbar #burger:checked ~ #menu-fullscreen nav {
+  width: 100vw;
   height: 100vh;
   transition-delay: 0s;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 #navbar #burger:checked ~ #menu-fullscreen nav > ul > li {
   opacity: 1;
   transition-delay: 0.5s;
+}
+
+body {
+  background: url("../images/Background.jpeg") no-repeat center top fixed;
+  background-size: cover;
+}
+
+.videoWrapper {
+  margin-top: 80%;
+  padding-left: 25%;
 }
 
 /*# sourceMappingURL=main.css.map */

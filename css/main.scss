@@ -2,3 +2,12 @@
 @import "parallax";
 @import 'navbar';
     
+
+body {
+    @include background("Background.jpeg", $position: center top, $attachment: fixed);
+}
+
+.videoWrapper{
+    margin-top: 80%;
+    padding-left: 25%;
+}

@@ -2,8 +2,7 @@
 
 .parallax {
     @include background("Background.jpeg", $position: center top, $attachment: fixed);
-    @include parallax(-.5);    
-    
-	height: 100vh;
+    @include parallax(-.05);    
+	height: 120vh;
     width: 100vw;
 }
