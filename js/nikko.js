@@ -10,7 +10,7 @@ $('li.dropdown ul').find('a').on('click', function() {
 
 $(document).ready(function() {
     $('.dropdown-toggle').dropdown();
-    $(header).load("../navbar.html");
+    $('#navbar').load("../navbar.html");
     //$("#sticker").sticky({topSpacing:0});
 });
 

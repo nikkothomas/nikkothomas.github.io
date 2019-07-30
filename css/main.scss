@@ -1,13 +1,28 @@
 @import 'assets/_mixins.scss';
 @import "parallax";
 @import 'navbar';
-    
+
 
 body {
-    @include background("Background.jpeg", $position: center top, $attachment: fixed);
+    background-color: #cdc0b0;
+
+    header {
+        top: 0px !important;
+        position: fixed;
+        z-index: 105;
+    }
+
+.wrapper {
+    position: absolute;
 }
 
-.videoWrapper{
+.transparent {
+    opacity: 0 !important;
+}
+
+.videoWrapper {
     margin-top: 80%;
     padding-left: 25%;
+}
+
 }
