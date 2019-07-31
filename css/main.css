@@ -26,13 +26,11 @@ body, body * {
 }
 
 #navbar-bg {
-  height: 100px;
   position: absolute;
 }
 
 #navbar {
   transition: all 0.4s linear;
-  position: relative;
   width: 100vw;
 }
 #navbar .navbar-brand > img {
@@ -40,11 +38,11 @@ body, body * {
   height: 3em;
   margin-top: 0.5em;
   z-index: -2;
+  position: relative;
 }
 #navbar .container-fluid {
-  position: sticky;
+  height: 0;
   padding-left: 0;
-  height: 100vh;
 }
 #navbar .container-fluid #burger {
   display: none;
@@ -144,10 +142,11 @@ body, body * {
 
 body {
   background-color: #cdc0b0;
+  overflow-x: hidden;
 }
 body header {
-  top: 0px !important;
-  position: fixed;
+  top: 0px;
+  position: sticky;
   z-index: 105;
 }
 body .wrapper {
@@ -157,7 +156,7 @@ body .transparent {
   opacity: 0 !important;
 }
 body .videoWrapper {
-  margin-top: 80%;
+  margin: 2em;
   padding-left: 25%;
 }
 
