@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Calligraffitti|Cedarville+Cursive|Permanent+Marker|Gloria+Hallelujah|La+Belle+Aurore|Rouge+Script&display=swap");
+@import url(https://fonts.googleapis.com/css?family=La+Belle+Aurore|Calligraffitti|Cedarville+Cursive|Permanent+Marker|Gloria+Hallelujah|Rouge+Script&display=swap);
 html,
 body {
   width: 100%;
@@ -34,19 +34,19 @@ body * {
 }
 .parallax .parallax-text {
   position: absolute;
-  top: 10vw;
+  top: 10.5vw;
   left: 29vw;
 }
 .parallax .parallax-text h1 {
-  font-size: calc(20px + 28 			* ((100vw - 300px) / 1300));
-  font-family: "La Bella Aurore", cursive;
+  font-size: calc(48px + 12 			* ((100vw - 400px) / 1520));
+  font-family: "La Belle Aurore", cursive;
   font-weight: 600;
+  color: #8d8d8d;
   font-style: italic;
   position: relative;
 }
 .parallax .parallax-text h1 + h1 {
-  top: 1em;
-  left: 21vw;
+  left: 20.35vw;
 }
 
 #navbar-bg {
@@ -87,7 +87,7 @@ body * {
   margin-top: -1px;
   left: 0;
   display: block;
-  background: #FFF;
+  background: #cdc0b0;
   transition: 0.5s;
 }
 #navbar .container-fluid #burger + label span:first-child {
@@ -138,7 +138,7 @@ body * {
 #navbar .container-fluid #burger ~ div#menu-fullscreen nav > ul > li > a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #FFF;
+  color: #cdc0b0;
   font-weight: 700;
   font-size: 32px;
   font-family: sans-serif;

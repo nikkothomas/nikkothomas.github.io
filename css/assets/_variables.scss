@@ -1,26 +1,26 @@
 //Google Fonts
-@import url('https://fonts.googleapis.com/css?family=Calligraffitti|Cedarville+Cursive|Permanent+Marker|Gloria+Hallelujah|La+Belle+Aurore|Rouge+Script&display=swap');
+@import url(https://fonts.googleapis.com/css?family=La+Belle+Aurore|Calligraffitti|Cedarville+Cursive|Permanent+Marker|Gloria+Hallelujah|Rouge+Script&display=swap);
 
 //Fonts
 $permanent-marker: 'Permanent Marker';
 $gloria-hallelujah: 'Gloria Hallelujah', cursive;
 $calligraffitti: 'Calligraffitti', cursive;
 $cedarville-cursive: 'Cedarville Cursive', cursive;
-$la-belle-aurore: 'La Bella Aurore', cursive;
-$rouge-script: 'Rogue Script', cursive;
+$rouge-script: 'Rouge Script', cursive;
+$la-belle-aurore: 'La Belle Aurore', cursive;
 
 //Font Size
-$min-size: 20px;
-$max-size: 48px;
-$min-vw: 300px;
-$max-vw: 1600px; 
+$min-size: 48px;
+$max-size: 60px;
+$min-vw: 400px;
+$max-vw: 1920px; 
 	
 //Image Locations
 $path--img: "../images";
 
 //Navbar
 
-$blackColor: #FFF;
+$beigeColor: #cdc0b0;
 
 //Parallax
 

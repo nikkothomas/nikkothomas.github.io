@@ -11,20 +11,20 @@
     
     .parallax-text{
         position: absolute;
-        top: 10vw;
+        top: 10.5vw;
         left: 29vw;        
         
         h1{
             @include calc-font-size($min-size, $max-size, $min-vw, $max-vw);
             font-family: $la-belle-aurore;
-			font-weight: 600;
+			font-weight: 600;            
+            color: #8d8d8d;
 			font-style: italic;
             position: relative;
         }
         
         h1 + h1 {
-            top: 1em;
-            left: 21vw;
+            left: 20.35vw;
         }
         
     }
