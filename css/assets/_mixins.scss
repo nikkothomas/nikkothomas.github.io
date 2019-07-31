@@ -3,7 +3,8 @@
 //Functions
 
 @function str-replace(
-    $string, $search,
+    $string,
+	$search,
     $replace: ""
     ) {
 	$index: str-index($string, $search);
@@ -13,6 +14,10 @@
 	}
 
 	@return $string;
+}
+
+@function strip-unit($value){
+	@return $value / ($value * 0 + 1);
 }
 
 //Fonts
@@ -45,6 +50,17 @@
         font-weight: $weight;
         src: $src;
     }
+}
+
+@mixin calc-font-size(
+	$min-size,
+	$max-size,
+	$min-vw,
+	$max-vw
+	){
+		font-size: calc(#{$min-size} + #{strip-unit($max-size - $min-size)}
+			* ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+		
 }
 
 //Background 

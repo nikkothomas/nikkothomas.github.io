@@ -1,5 +1,5 @@
 @include parallax-init;
-
+@include font-face(Paintdrp, /fonts/Paintdrp);
 
 .parallax {
     @include background("Background.jpeg", $position: center top, $attachment: fixed);
@@ -11,22 +11,20 @@
     
     .parallax-text{
         position: absolute;
-        top: 15%;
-        left: 30%;        
+        top: 10vw;
+        left: 29vw;        
         
         h1{
+            @include calc-font-size($min-size, $max-size, $min-vw, $max-vw);
+            font-family: $la-belle-aurore;
+			font-weight: 600;
+			font-style: italic;
             position: relative;
-            font-size: 52px;            
-            font-family: $permanent-marker;
         }
         
         h1 + h1 {
             top: 1em;
-            left: 7.2em;
-        }
-        
-        .quote{
-            
+            left: 21vw;
         }
         
     }

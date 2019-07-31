@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Calligraffitti|Cedarville+Cursive|Permanent+Marker|Gloria+Hallelujah|La+Belle+Aurore|Rouge+Script&display=swap");
 html,
 body {
   width: 100%;
@@ -34,18 +34,21 @@ body * {
 }
 .parallax .parallax-text {
   position: absolute;
-  top: 15%;
-  left: 30%;
+  top: 10vw;
+  left: 29vw;
 }
 .parallax .parallax-text h1 {
+  font-size: calc(20px + 28 			* ((100vw - 300px) / 1300));
+  font-family: "La Bella Aurore", cursive;
+  font-weight: 600;
+  font-style: italic;
   position: relative;
-  font-size: 52px;
-  font-family: Paintdrp;
 }
 .parallax .parallax-text h1 + h1 {
   top: 1em;
-  left: 7.2em;
+  left: 21vw;
 }
+
 #navbar-bg {
   position: absolute;
 }
