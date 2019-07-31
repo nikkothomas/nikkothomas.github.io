@@ -2,6 +2,9 @@
 @import "parallax";
 @import 'navbar';
 
+.menu-open {
+    overflow-y: hidden;
+}
 
 body {
     background-color: #cdc0b0;
@@ -12,17 +15,17 @@ body {
         z-index: 105;
     }
 
-.wrapper {
-    position: absolute;
-}
+    .wrapper {
+        position: absolute;
+    }
 
-.transparent {
-    opacity: 0 !important;
-}
+    .transparent {
+        opacity: 0 !important;
+    }
 
-.videoWrapper {
-    margin-top: 80%;
-    padding-left: 25%;
-}
+    .videoWrapper {
+        margin-top: 80%;
+        padding-left: 25%;
+    }
 
 }

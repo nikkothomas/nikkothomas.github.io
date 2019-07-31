@@ -11,7 +11,10 @@ $('li.dropdown ul').find('a').on('click', function() {
 $(document).ready(function() {
     $('.dropdown-toggle').dropdown();
     $('#navbar').load("../navbar.html");
-    //$("#sticker").sticky({topSpacing:0});
+});
+
+$(document).on('change', '#burger', function() {
+    $('body').toggleClass("menu-open");
 });
 
 window.onscroll = function() {scrollFunction()};
