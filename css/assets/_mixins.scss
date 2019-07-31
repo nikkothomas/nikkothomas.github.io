@@ -1,5 +1,52 @@
 @import 'variables';
 
+//Functions
+
+@function str-replace(
+    $string, $search,
+    $replace: ""
+    ) {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+//Fonts
+
+@mixin font-face(
+    $name,
+    $path,
+    $weight: null,
+    $style: null,
+    $exts: eot woff2 woff ttf svg
+    ) {
+    $src: null;
+
+    $extmods: (eot: "?",
+            svg: "#"+ str-replace($name, " ", "_"));
+
+    $formats: (otf: "opentype",
+            ttf: "truetype"
+        );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
 //Background 
 
 @mixin background(
@@ -8,53 +55,54 @@
     $repeat: no-repeat,
     $attachment: scroll
     ) {
-    background:
-		url('#{$path--img}/#{$img}') $repeat $position $attachment;
-        background-size: cover;
-	
+    background: url('#{$path--img}/#{$img}') $repeat $position $attachment;
+    background-size: cover;
+
 }
 
 //Parallax
 
 @mixin parallax-init(
-  $perspective  : $parallax-perspective,
-  $element      : $parallax-element,
-  $parallax-ios : $parallax-ios
-  ) {
-  @if $element == "body" {
-    html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
+    $perspective : $parallax-perspective,
+    $element : $parallax-element,
+    $parallax-ios : $parallax-ios
+    ) {
+    @if $element=="body" {
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
     }
-  }
-  #{$element} {
-    overflow: auto;
-    perspective: $perspective * 1px;
-    transform-style: preserve-3d;
-    // Allows for smooth scrolling but disables parallax effects.
-    @if $parallax-ios == false {
-      -webkit-overflow-scrolling: touch;
+
+    #{$element} {
+        overflow: auto;
+        perspective: $perspective * 1px;
+        transform-style: preserve-3d;
+
+        // Allows for smooth scrolling but disables parallax effects.
+        @if $parallax-ios==false {
+            -webkit-overflow-scrolling: touch;
+        }
+
+        // Preserve 3D
+        &,
+        * {
+            transform-style: preserve-3d;
+        }
     }
-    // Preserve 3D
-    &, * {
-      transform-style: preserve-3d;
-    }
-  }
 }
 
 @mixin parallax(
     $distance: 0,
     $perspective: $parallax-perspective
     ) {
-    transform: 
-        translateZ($distance * $perspective * 1px) 
-        scale(abs($distance - 1))
-    ;
+    transform:
+        translateZ($distance * $perspective * 1px) scale(abs($distance - 1));
     z-index: $distance * 1000;
 
 }
-
-

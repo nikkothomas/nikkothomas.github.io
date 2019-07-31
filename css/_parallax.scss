@@ -1,9 +1,33 @@
 @include parallax-init;
 
+
 .parallax {
     @include background("Background.jpeg", $position: center top, $attachment: fixed);
     @include parallax(0);    
     position: relative;
+    top: 0;
 	height: 120vh;
     width: 100vw;
+    
+    .parallax-text{
+        position: absolute;
+        top: 15%;
+        left: 30%;        
+        
+        h1{
+            position: relative;
+            font-size: 52px;            
+            font-family: $permanent-marker;
+        }
+        
+        h1 + h1 {
+            top: 1em;
+            left: 7.2em;
+        }
+        
+        .quote{
+            
+        }
+        
+    }
 }

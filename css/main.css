@@ -1,4 +1,6 @@
-html, body {
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -11,20 +13,39 @@ body {
   perspective: 1px;
   transform-style: preserve-3d;
 }
-body, body * {
+body,
+body * {
   transform-style: preserve-3d;
 }
 
+@font-face {
+  font-family: "Paintdrp";
+  src: url("/fonts/Paintdrp.eot?") format("eot"), url("/fonts/Paintdrp.woff2") format("woff2"), url("/fonts/Paintdrp.woff") format("woff"), url("/fonts/Paintdrp.ttf") format("truetype"), url("/fonts/Paintdrp.svg#Paintdrp") format("svg");
+}
 .parallax {
   background: url("../images/Background.jpeg") no-repeat center top fixed;
   background-size: cover;
   transform: translateZ(0px) scale(1);
   z-index: 0;
   position: relative;
+  top: 0;
   height: 120vh;
   width: 100vw;
 }
-
+.parallax .parallax-text {
+  position: absolute;
+  top: 15%;
+  left: 30%;
+}
+.parallax .parallax-text h1 {
+  position: relative;
+  font-size: 52px;
+  font-family: Paintdrp;
+}
+.parallax .parallax-text h1 + h1 {
+  top: 1em;
+  left: 7.2em;
+}
 #navbar-bg {
   position: absolute;
 }
