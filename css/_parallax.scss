@@ -17,7 +17,7 @@
         h1{
             @include calc-font-size($min-size, $max-size, $min-vw, $max-vw);
             font-family: $la-belle-aurore;
-			font-weight: 600;            
+			font-weight: 800;            
             color: #8d8d8d;
 			font-style: italic;
             position: relative;

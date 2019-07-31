@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=La+Belle+Aurore|Calligraffitti|Cedarville+Cursive|Permanent+Marker|Gloria+Hallelujah|Rouge+Script&display=swap);
+@import url(https://fonts.googleapis.com/css?family=La+Belle+Aurore|Calligraffitti|Pacifico|Permanent+Marker|Gloria+Hallelujah|Rouge+Script&display=swap);
 html,
 body {
   width: 100%;
@@ -40,7 +40,7 @@ body * {
 .parallax .parallax-text h1 {
   font-size: calc(48px + 12 			* ((100vw - 400px) / 1520));
   font-family: "La Belle Aurore", cursive;
-  font-weight: 600;
+  font-weight: 800;
   color: #8d8d8d;
   font-style: italic;
   position: relative;
