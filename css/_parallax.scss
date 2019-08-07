@@ -1,7 +1,7 @@
 @include parallax-init;
 @include font-face(Paintdrp, /fonts/Paintdrp);
 
-.parallax {
+.parallax-main {
     @include background("Background.jpeg", $position: center top, $attachment: fixed);
     @include parallax(0);    
     position: relative;
@@ -25,6 +25,65 @@
         
         h1 + h1 {
             left: 20.35vw;
+        }
+        
+    }
+}
+
+.parallax-about {
+    @include background("aboutpage.jpeg", $position: center top, $attachment: fixed);
+    @include parallax(0);    
+    position: relative;
+    top: 0;
+	height: 120vh;
+    width: 100vw;
+    
+    .parallax-text-about{
+        position: absolute;
+        top: 16.5vh;
+        left: 49vw;        
+        
+        h1{
+            @include calc-font-size($min-size, $max-size, $min-vw, $max-vw);
+            font-family: $la-belle-aurore;
+			font-weight: 800;            
+            color: #8d8d8d;
+			font-style: italic;
+            position: relative;
+        }
+        
+        h1 + h1 {
+            left: 20.35vw;
+        }
+        
+    }
+}
+
+.parallax-contact {
+    @include background("contactpage.jpeg", $position: center top, $attachment: fixed);
+    @include parallax(0);    
+    position: relative;
+    top: 0;
+	height: 120vh;
+    width: 100vw;
+    
+    .parallax-text-contact{
+        position: absolute;
+        top: 25vh;
+        left: 68vw;        
+        
+        h1{
+            @include calc-font-size($min-size, $max-size, $min-vw, $max-vw);
+            font-family: $la-belle-aurore;
+			font-weight: 800;            
+            color: black;
+			font-style: italic;
+            position: relative;
+            text-shadow: -5px 4px 14px black;
+        }
+        
+        h1 + h1 {
+            left: 5vw;
         }
         
     }

@@ -6,15 +6,27 @@
     overflow-y: hidden;
 }
 
+.content {
+    margin: 5% 20%;
+    background: gray;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 50%;
+}
+
 body {
     background-color: #cdc0b0;
     overflow-x: hidden;
-    
+
     header {
         top: 0px;
         position: sticky;
         z-index: 105;
     }
+
+
 
     .wrapper {
         position: absolute;

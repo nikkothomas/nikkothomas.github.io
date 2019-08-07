@@ -122,3 +122,9 @@
     z-index: $distance * 1000;
 
 }
+
+@mixin get-background(
+    $background-name: "Background.jpg")
+{
+    
+}

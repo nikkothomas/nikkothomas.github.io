@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="Michael Bi" content="">
@@ -9,7 +10,7 @@
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <!--[if IE]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -18,100 +19,70 @@
 </head>
 
 <body>
-    <!-- Navigation Bar  -->
-    <nav class="navbar navbar-default" role="navigation">
-        <div id="headerContainer" class="container-fluid">
-            <div class="navbar-header">
-                <button id="btnMobileMenu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html" id="name"><img id="#logo" class="img-responsive" src="images/NTBrand.png"> </a>
-            </div>          
-            <div class="collapse navbar-collapse" id = "navbarCollapse">
-                <ul class="nav navbar-nav" >
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="film.html">Film</a></li>
-                    <li class="dropdown" data-toggle="dropdown">
-                           <a href="#" >Theatre</a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown" id="TWP">
-                                   <a href="the-wild-party.html">The Wild Party</a> 
-                                </li>
-                                <li class="dropdown" id="STA">
-                                   <a href="shakespeares-titus-andronicus.html"> Shakespeare's Titus Andronicus</a>
-                                </li>
-                                <li class="dropdown" id="AGF">
-                                    <a href="our-kiki-a-gay-farce.html">Our Kiki: A Gay Farce</a>
-                                </li>
-                            </ul>
-                    </li>
+    <header>
+        <div id="navbar-bg" class="transparent">
+            <!-- transparent background-->
+        </div>
+        <div id="navbar"></div>
+    </header>
 
-                    <li><a href="mylooks.html">My Looks</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                   </ul>
-           </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-   
+    <div class="parallax-contact">
+        <div class="parallax-text-contact">
+            <h1> Contact </h1>
+            <h1> Nikko</h1>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="content">
-                <div class="panel-body">
-                     <h3 class="text-center">Representation</h3>
-                        <div class="row text-center">
-                            <div class="col-lg-6">
-                                <label class="textFont">Theatrical</label>
-                                <label class="textFont">     
-                                Aqua Talent Agency <br>Courtney Peldon <br>
-                                310.859.8889   </label> 
-                            </div>
-                            <div class="col-lg-6 vertical-line">
-                               <label class="textFont">Commerical</label>
-                                <label class="textFont">
-                                AB2Talent <br>Andrea Beane/Angelina Bruno <br>
-                                310.235.1446  </label>  
-                            </div>
-                        </div>
+            <div class="panel-body">
+                <h3 class="text-center">Representation</h3>
+                <div class="row text-center">
+                    <div class="col-lg-6">
+                        <label class="textFont">Theatrical</label>
+                        <label class="textFont">
+                            Aqua Talent Agency <br>Courtney Peldon <br>
+                            310.859.8889 </label>
+                    </div>
+                    <div class="col-lg-6 vertical-line">
+                        <label class="textFont">Commerical</label>
+                        <label class="textFont">
+                            AB2Talent <br>Andrea Beane/Angelina Bruno <br>
+                            310.235.1446 </label>
+                    </div>
+                </div>
             </div>
             <br>
             <div class="panel-body">
-                     <div class="col-sm-6">
-                        <img class="img-responsive img-contact" src="images/contactPicture.jpg" alt="contactimg" style="text-align: center;">
+                <h3>
+                    Let's collaborate & create
+                </h3>
+                <form action="https://formspree.io/nikkothomas.info@gmail.com" method="post">
+                    <div class="form-group">
+                        <label for="inputName">Name *</label>
+                        <input class="form-control" type="text" id="inputName" required> </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email *</label>
+                        <input class="form-control" type="email" id="inputEmail" required>
                     </div>
-                    <div class="col-lg-6">
-                          <h3>
-                        Let's collaborate & create
-                      </h3>    
-                           <form action="https://formspree.io/nikkothomas.info@gmail.com" method="post">
-                            <div class="form-group">
-                                <label for="inputName">Name *</label>
-                            <input class="form-control" type="text" id="inputName" required > </div>
-                            <div class="form-group">
-                               <label for="inputEmail">Email *</label>
-                                <input class="form-control" type="email" id="inputEmail"  required>
-                            </div>
-                             <div class="form-group">
-                                <label for="inputPhone">Phone Number</label>
-                                <input class="form-control" type="number" id="inputPhone" >     
-                             </div>
-                            <div class="form-group">
-                               <label for="inputMessage">Message *</label>
-                                <textarea class="form-control"  id="inputMessage" rows="7" required> </textarea>
-                            </div>
-                            <button class="btn btn-primary" type="submit" >
-                                Send Message
-                            </button> 
-                        </form>                        
+                    <div class="form-group">
+                        <label for="inputPhone">Phone Number</label>
+                        <input class="form-control" type="number" id="inputPhone">
                     </div>
-                </div>
-            </div>     
+                    <div class="form-group">
+                        <label for="inputMessage">Message *</label>
+                        <textarea class="form-control" id="inputMessage" rows="7" required> </textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/nikko.js"></script>
 </body>
+
 </html>
